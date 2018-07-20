@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <% @products.each do |product| %>
+        <div class="col-md-4">
+          <div class="ui card">
+            <div class="image">
+              <%= image_tag product.image %>
+            </div>
+            <div class="content">
+              <a class="header"><%= product.name %></a>
+              <div class="meta">
+                <span class="date">Published in <%= product.year %></span>
+              </div>
+              <div class="description">
+                <%= product.description %>
+              </div>
+            </div>
+            <div class="extra content">
+              <a>
+                <i class="user icon"></i>
+                $<%= product.price %>
+              </a>
+            </div>
+          </div>
+        </div>
+    <% end %>
+  </div>
+</div>
